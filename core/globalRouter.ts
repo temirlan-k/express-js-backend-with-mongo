@@ -1,10 +1,12 @@
 import { Router } from 'express';
-import eventRouter from '../modules/events/routers';
 import userRouter from '../modules/auth/routers';
+import songRouter from '../modules/songs/routers';
+
 
 
 const globalRouter = Router();
-globalRouter.use(eventRouter);
 globalRouter.use(userRouter)
+globalRouter.use(songRouter)
+
 
 export default globalRouter;
